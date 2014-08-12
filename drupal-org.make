@@ -63,13 +63,18 @@ projects[views][version] = "3.8"
 projects[bootstrap][version] = "3.x-dev"
 projects[cms_bootstrap3][version] = "1.x-dev"
 
+projects[cms_core][subdir] = cms
+projects[cms_core][version] = "1.x-dev"
+
 
 ; Libraries
 ; ---------
-libraries[profiler][download][type] = "git"
-libraries[profiler][download][revision] = "e21698b"
-libraries[profiler][download][branch] = "7.x-2.x"
-libraries[profiler][download][url] = "git://git.drupal.org/sandbox/peach/2317887.git"
+; This doesn't work on d.o. because my sandbox is not white-list by d.o. packager
+; @todo download profiler and patch it from here
+;libraries[profiler][download][type] = "git"
+;libraries[profiler][download][revision] = "e21698b"
+;libraries[profiler][download][branch] = "7.x-2.x"
+;libraries[profiler][download][url] = "git://git.drupal.org/sandbox/peach/2317887.git"
 
 ; Important, beta2 does not work, it generates errors! https://www.drupal.org/node/2278487
 ;libraries[profiler][download][type] = "get"
@@ -80,11 +85,17 @@ libraries[profiler][download][url] = "git://git.drupal.org/sandbox/peach/2317887
 
 projects[tagclouds][subdir] = contrib
 
+projects[cms_blog][subdir] = cms
+projects[cms_blog][version] = "1.x-dev"
+
 ; CMS Contact
 ; -------
 
 projects[webform][subdir] = contrib
 projects[webform][version] = "4.0-rc5"
+
+projects[cms_contact][subdir] = cms
+projects[cms_contact][version] = "1.x-dev"
 
 ; CMS Events
 ; -------
@@ -102,6 +113,9 @@ projects[addressfield_tokens][subdir] = contrib
 
 projects[date][subdir] = contrib
 
+projects[cms_events][subdir] = cms
+projects[cms_events][version] = "1.x-dev"
+
 libraries[plupload][download][type] = "get"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 libraries[plupload][directory_name] = "plupload"
@@ -114,12 +128,18 @@ projects[registration][subdir] = contrib
 ; CMS News
 ; -------
 
+projects[cms_news][subdir] = cms
+projects[cms_news][version] = "1.x-dev"
+
 ; CMS Performance
 ; -------
 
 projects[entitycache][subdir] = contrib
 
-; CMS Showcases
+projects[cms_performance][subdir] = cms
+projects[cms_performance][version] = "1.x-dev"
+
+; CMS Portfolio
 ; -------
 
 projects[plupload][subdir] = contrib
@@ -139,6 +159,9 @@ projects[image_url_formatter][subdir] = contrib
 libraries[plupload][download][type] = "get"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 libraries[plupload][directory_name] = "plupload"
+
+projects[cms_portfolio][subdir] = cms
+projects[cms_portfolio][version] = "1.x-dev"
 
 ; CMS WYSIWYG
 ; -------
@@ -161,3 +184,6 @@ projects[shortcode][version] = "2.0"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.3/ckeditor_4.3.3_standard.zip"
 libraries[ckeditor][directory_name] = "ckeditor"
+
+projects[cms_wysiwyg][subdir] = cms
+projects[cms_wysiwyg][version] = "1.x-dev"
