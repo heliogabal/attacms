@@ -83,3 +83,73 @@ variables[user_picture_style] = thumbnail
 variables[user_pictures] = 1
 variables[user_register] = USER_REGISTER_ADMINISTRATORS_ONLY
 
+
+; CMS Blog
+; -------
+
+dependencies[] = cms_blog
+dependencies[] = tagclouds
+
+; CMS Contact
+; -------
+
+dependencies[] = cms_contact
+dependencies[] = webform
+variables[pathauto_node_webform_pattern] = [node:title]
+
+; CMS Events
+; -------
+
+dependencies[] = cms_events
+dependencies[] = addressfield
+dependencies[] = addressfield_tokens
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_views
+dependencies[] = date_popup
+dependencies[] = date_all_day
+dependencies[] = filefield_sources
+dependencies[] = filefield_sources_plupload
+dependencies[] = libraries
+variables[pathauto_node_event_pattern] = [node:title]
+
+; CMS News
+; -------
+
+dependencies[] = cms_news
+
+; CMS Performance
+; -------
+
+dependencies[] = cms_performance
+dependencies[] = entitycache
+variables[block_cache] = 1
+variables[cache] = 1
+variables[entitycache_enabled] = 1
+variables[page_cache_maximum_age] = 86400
+variables[page_compression] = 1
+variables[preprocess_css] = 1
+variables[preprocess_js] = 1
+
+; CMS Portfolio
+; -------
+
+dependencies[] = cms_portfolio
+dependencies[] = filefield_sources
+dependencies[] = filefield_sources_plupload
+dependencies[] = image_field_caption
+dependencies[] = image_url_formatter
+dependencies[] = libraries
+dependencies[] = plupload
+
+dependencies[] = views_bootstrap
+
+; CMS WYSIWYG
+; -------
+
+dependencies[] = cms_wysiwyg
+dependencies[] = media
+dependencies[] = wysiwyg
+dependencies[] = wysiwyg_filter
+;dependencies[] = sc_basic
+;dependencies[] = shortcode
