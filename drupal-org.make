@@ -67,19 +67,6 @@ projects[cms_core][subdir] = cms
 projects[cms_core][version] = "1.x-dev"
 
 
-; Libraries
-; ---------
-; This doesn't work on d.o. because my sandbox is not white-list by d.o. packager
-; @todo download profiler and patch it from here
-;libraries[profiler][download][type] = "git"
-;libraries[profiler][download][revision] = "e21698b"
-;libraries[profiler][download][branch] = "7.x-2.x"
-;libraries[profiler][download][url] = "git://git.drupal.org/sandbox/peach/2317887.git"
-
-; Important, beta2 does not work, it generates errors! https://www.drupal.org/node/2278487
-;libraries[profiler][download][type] = "get"
-;libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.0-beta1.tar.gz"
-
 ; CMS Blog
 ; -------
 
