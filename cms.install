@@ -1,0 +1,172 @@
+<?php
+
+function cms_install(&$tasks, &$install_state) {
+
+
+  $values = array(
+    array(
+      'bid' => '1',
+      'body' => '<div class="row"><p class="col-md-4">Explore CMS Kickstart and create your own unique&nbsp; design. CMS Kickstart works with any theme and comes with handy <strong><a href="http://getbootstrap.com/examples/grid/">classes</a> </strong>for custom layouts!</p></div>',
+      'info' => 'Welcome to CMS Kickstart',
+      'format' => 'wysiwyg_simple',
+    ),
+    array(
+      'bid' => '2',
+      'body' => '<p><img src="http://b.cksource.com/a/1/img/ckeditor-logo.png"></p><p>Complete with CKEditor 4 and advanced media management configuration</p><hr><p><img class="center-block" src="http://www.google.com/images/icons/product/pagespeed-80.png"></p><p>Implements Google PageSpeed advice for faster user experience</p><hr><p><img src="https://www.drupal.org/files/drupal_logo-blue.png"></p><p>Powered by Drupal</p><hr><p><img class="center-block col-md-6" src="http://www.basecom.de/uploads/pics/marketing_tools_08.png"></p><p>SEO optimized</p>',
+      'info' => 'Tech Banners',
+      'format' => 'wysiwyg_full',
+    ),
+  );
+  $query = db_insert('block_custom')->fields(array('bid', 'body', 'info', 'format'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+
+
+
+  $default_theme = 'cms_bootstrap3';
+  // install blocks, we need to do it here because the install files inside
+  // the modules run to early in the installation process for this to work.
+  $values = array(
+    array(
+      'module' => 'block',
+      'delta' => '1',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'header',
+      'pages' => '<front>',
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => 'jumbotron phototron',
+    ),
+    array(
+      'module' => 'block',
+      'delta' => '2',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'sidebar_second',
+      'pages' => '<front>',
+      'title' => '<none>',
+      'cache' => '-1',
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'menu',
+      'delta' => 'menu-footer-menu',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '0',
+      'weight' => '5',
+      'region' => 'footer',
+      'pages' => '',
+      'title' => '<none>',
+      'cache' => '-1',
+      'css_class' => 'clear-both',
+    ),
+  );
+  if (module_exists('cms_blog')) {
+    $values[] = array(
+      'module' => 'tagclouds',
+      'delta' => '1',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'sidebar_second',
+      'pages' => "blog\nblog/*\ntags/*",
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => '',
+    );
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_blog-blog_authors',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'sidebar_second',
+      'pages' => "blog\nblog/*\ntags/*",
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => '',
+    );
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_blog-recent_blog_posts',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'footer',
+      'pages' => '<front>',
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => 'col-sm-4',
+    );
+  }
+  if (module_exists('cms_events')) {
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_events-upcoming_events',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'footer',
+      'pages' => '<front>',
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => 'col-sm-4',
+    );
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_events-monthly_archive',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'sidebar_second',
+      'pages' => "events\nevents/*\nevents-archive\nevents-archive/*",
+      'title' => '<none>',
+      'cache' => '-1',
+      'css_class' => '',
+    );
+  }
+  if (module_exists('cms_news')) {
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_news-block',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '0',
+      'region' => 'footer',
+      'pages' => '<front>',
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => 'col-sm-4',
+    );
+  }
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'visibility', 'weight', 'region', 'pages', 'title', 'cache', 'css_class'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+
+  module_enable(array('cms_blog_content'));
+
+  module_enable(array('cms_events_content'));
+
+  module_enable(array('cms_news_content'));
+
+  module_enable(array('cms_portfolio_content'));
+
+  module_enable(array('cms_core_content'));
+
+}
