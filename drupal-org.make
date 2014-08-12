@@ -162,11 +162,11 @@ projects[wysiwyg][version] = "2.x-dev"
 projects[wysiwyg_filter][subdir] = contrib
 projects[wysiwyg_filter][version] = "1.x-dev"
 
-projects[sc_basic][subdir] = contrib
-projects[sc_basic][version] = "1.0-beta1"
+;projects[sc_basic][subdir] = contrib
+;projects[sc_basic][version] = "1.0-beta1"
 
-projects[shortcode][subdir] = contrib
-projects[shortcode][version] = "2.0"
+;projects[shortcode][subdir] = contrib
+;projects[shortcode][version] = "2.0"
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.3/ckeditor_4.3.3_standard.zip"
