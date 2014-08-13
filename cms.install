@@ -79,7 +79,7 @@ function cms_install(&$tasks, &$install_state) {
       'weight' => '0',
       'region' => 'sidebar_second',
       'pages' => "blog\nblog/*\ntags/*",
-      'title' => '',
+      'title' => 'Tags',
       'cache' => '-1',
       'css_class' => '',
     );
@@ -133,7 +133,7 @@ function cms_install(&$tasks, &$install_state) {
       'weight' => '0',
       'region' => 'sidebar_second',
       'pages' => "events\nevents/*\nevents-archive\nevents-archive/*",
-      'title' => '<none>',
+      'title' => 'Events Archive',
       'cache' => '-1',
       'css_class' => '',
     );
