@@ -77,7 +77,7 @@ projects[bootstrap][download][type] = "git"
 projects[bootstrap][download][url] = "http://git.drupal.org/project/bootstrap.git"
 projects[bootstrap][download][revision] = "de0608d0ff712597f31d3eaac27abaf1f6fdb934"
 
-projects[cms_bootstrap3]
+projects[cms_bootstrap3][version] = 1
 
 projects[cms_core][subdir] = cms
 
