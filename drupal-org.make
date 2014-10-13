@@ -5,7 +5,7 @@ core = 7.x
 ; Modules
 ; -------
 
-projects[libraries][subdir] = contribs
+projects[libraries][subdir] = contrib
 projects[libraries][version] = "2.2"
 
 projects[ctools][subdir] = contrib
@@ -71,6 +71,13 @@ projects[uuid_features][version] = "1.x-dev"
 
 projects[views][subdir] = contrib
 projects[views][version] = "3.8"
+
+projects[bootstrap][version] = "3.x-dev"
+projects[bootstrap][download][type] = "git"
+projects[bootstrap][download][url] = "http://git.drupal.org/project/bootstrap.git"
+projects[bootstrap][download][revision] = "de0608d0ff712597f31d3eaac27abaf1f6fdb934"
+
+projects[cms_bootstrap3][version] = "1.x-dev"
 
 projects[cms_core][subdir] = cms
 projects[cms_core][version] = "1.x-dev"
