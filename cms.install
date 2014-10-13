@@ -6,14 +6,27 @@ function cms_install(&$tasks, &$install_state) {
   $values = array(
     array(
       'bid' => '1',
-      'body' => '<div class="row"><p class="col-md-4">Explore CMS Kickstart and create your own unique&nbsp; design. CMS Kickstart works with any theme and comes with handy <strong><a href="http://getbootstrap.com/examples/grid/">classes</a> </strong>for custom layouts!</p></div>',
-      'info' => 'Welcome to CMS Kickstart',
-      'format' => 'wysiwyg_simple',
+      'body' => '<img alt="Portrait" class="phototron-image" data-license="https://creativecommons.org/licenses/by-sa/2.0/" data-source="https://www.flickr.com/photos/kk/3905212994/in/set-72157622323170600" src="http://i.imgur.com/uaWeCc1.jpg">
+
+<div class="row">
+  <div class="col-md-6">
+    <p>Explore CMS Kickstart and create engaging Drupal sites with ease. CMS Kickstart works with any theme and comes with handy tools for custom layouts!</p>
+  </div>
+</div>',
+      'info' => 'Welcome to Drupal CMS Kickstart',
+      'title' => 'Welcome to Drupal CMS Kickstart',
+      'format' => 'wysiwyg_full',
     ),
     array(
       'bid' => '2',
-      'body' => '<p><img src="http://b.cksource.com/a/1/img/ckeditor-logo.png"></p><p>Complete with CKEditor 4 and advanced media management configuration</p><hr><p><img class="center-block" src="http://www.google.com/images/icons/product/pagespeed-80.png"></p><p>Implements Google PageSpeed advice for faster user experience</p><hr><p><img src="https://www.drupal.org/files/drupal_logo-blue.png"></p><p>Powered by Drupal</p><hr><p><img class="center-block col-md-6" src="http://www.basecom.de/uploads/pics/marketing_tools_08.png"></p><p>SEO optimized</p>',
-      'info' => 'Tech Banners',
+      'body' => '[box heading="" border="#428bca" border_style="border-bottom" background="#f3f3f3" style="rounded"][lead]CMS Kickstart content types[/lead][/box]',
+      'info' => 'CMS Kickstart Content Types',
+      'format' => 'wysiwyg_full',
+    ),
+    array(
+      'bid' => '3',
+      'body' => '[social type="inline" style="circle" color="inherit" size="2x" hover="pulse" Twitter="#" Facebook="#" YouTube="#" Drupal="#|9 Years on D.O.!"][/social]',
+      'info' => 'Social links',
       'format' => 'wysiwyg_full',
     ),
   );
@@ -48,8 +61,8 @@ function cms_install(&$tasks, &$install_state) {
       'theme' => $default_theme,
       'status' => '1',
       'visibility' => '1',
-      'weight' => '0',
-      'region' => 'sidebar_second',
+      'weight' => '-6',
+      'region' => 'content',
       'pages' => '<front>',
       'title' => '<none>',
       'cache' => '-1',
@@ -61,7 +74,20 @@ function cms_install(&$tasks, &$install_state) {
       'theme' => $default_theme,
       'status' => '1',
       'visibility' => '0',
-      'weight' => '5',
+      'weight' => '0',
+      'region' => 'footer',
+      'pages' => '',
+      'title' => '<none>',
+      'cache' => '-1',
+      'css_class' => 'clear-both',
+    ),
+    array(
+      'module' => 'block',
+      'delta' => '3',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '0',
+      'weight' => '0',
       'region' => 'footer',
       'pages' => '',
       'title' => '<none>',
@@ -81,7 +107,7 @@ function cms_install(&$tasks, &$install_state) {
       'pages' => "blog\nblog/*\ntags/*",
       'title' => 'Tags',
       'cache' => '-1',
-      'css_class' => '',
+      'css_class' => 'well',
     );
     $values[] = array(
       'module' => 'views',
@@ -102,8 +128,8 @@ function cms_install(&$tasks, &$install_state) {
       'theme' => $default_theme,
       'status' => '1',
       'visibility' => '1',
-      'weight' => '0',
-      'region' => 'footer',
+      'weight' => '-5',
+      'region' => 'content',
       'pages' => '<front>',
       'title' => '',
       'cache' => '-1',
@@ -117,8 +143,8 @@ function cms_install(&$tasks, &$install_state) {
       'theme' => $default_theme,
       'status' => '1',
       'visibility' => '1',
-      'weight' => '0',
-      'region' => 'footer',
+      'weight' => '-4',
+      'region' => 'content',
       'pages' => '<front>',
       'title' => '',
       'cache' => '-1',
@@ -135,7 +161,7 @@ function cms_install(&$tasks, &$install_state) {
       'pages' => "events\nevents/*\nevents-archive\nevents-archive/*",
       'title' => 'Events Archive',
       'cache' => '-1',
-      'css_class' => '',
+      'css_class' => 'well',
     );
   }
   if (module_exists('cms_news')) {
@@ -145,12 +171,27 @@ function cms_install(&$tasks, &$install_state) {
       'theme' => $default_theme,
       'status' => '1',
       'visibility' => '1',
-      'weight' => '0',
-      'region' => 'footer',
+      'weight' => '-3',
+      'region' => 'content',
       'pages' => '<front>',
       'title' => '',
       'cache' => '-1',
       'css_class' => 'col-sm-4',
+    );
+  }
+  if (module_exists('cms_portfolio')) {
+    $values[] = array(
+      'module' => 'views',
+      'delta' => 'cms_portfolio-portfolio_block',
+      'theme' => $default_theme,
+      'status' => '1',
+      'visibility' => '1',
+      'weight' => '-2',
+      'region' => 'content',
+      'pages' => '<front>',
+      'title' => '',
+      'cache' => '-1',
+      'css_class' => 'clear-both',
     );
   }
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'visibility', 'weight', 'region', 'pages', 'title', 'cache', 'css_class'));
@@ -169,4 +210,20 @@ function cms_install(&$tasks, &$install_state) {
 
   module_enable(array('cms_core_content'));
 
+  module_load_include('inc', 'pathauto');
+  module_load_include('inc', 'pathauto.pathauto');
+  $nids = db_query("SELECT nid FROM {node}")->fetchCol();
+  pathauto_node_update_alias_multiple($nids, 'bulkupdate');
+
+  // $system_path = _cms_get_node_path_for_uuid('aec8f3b0-2e80-430b-850e-d8c99af2cbf7');
+  // variable_set('site_frontpage', $system_path);
+
+}
+
+function _cms_get_node_path_for_uuid($uuid) {
+  // module_load_include('inc', 'uuid', 'uuid.entity');
+  module_load_include('module', 'uuid');
+  $nid = entity_get_id_by_uuid('node', array($uuid));
+  $system_path = 'node/' . array_pop($nid);
+  return $system_path;
 }

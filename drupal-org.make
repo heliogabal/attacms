@@ -5,13 +5,15 @@ core = 7.x
 ; Modules
 ; -------
 
-projects[libraries][subdir] = contrib
+projects[libraries][subdir] = contribs
 projects[libraries][version] = "2.2"
 
 projects[ctools][subdir] = contrib
 projects[ctools][version] = "1.4"
 
 projects[block_class][subdir] = contrib
+projects[block_class][version] = "2.1"
+projects[block_class][patch][] = "https://www.drupal.org/files/issues/block_class-predefined_classes_dropdown-665012-21.patch"
 
 projects[elements][subdir] = contrib
 
@@ -26,6 +28,10 @@ projects[fences][subdir] = contrib
 projects[fences][version] = "1.x-dev"
 
 projects[file_entity][subdir] = contrib
+
+projects[filefield_sources][subdir] = contrib
+
+projects[filefield_sources_plupload][subdir] = contrib
 
 projects[globalredirect][subdir] = contrib
 
@@ -44,7 +50,13 @@ projects[metatag_views_overview][version] = "1.x-dev"
 
 projects[module_filter][subdir] = contrib
 
+projects[node_class][subdir] = contrib
+projects[node_class][version] = "1.3"
+; projects[node_class][patch][] = "https://www.drupal.org/files/issues/node_class-big_feature_update_code_cleanup.patch"
+
 projects[pathauto][subdir] = contrib
+
+projects[plupload][subdir] = contrib
 
 projects[strongarm][subdir] = contrib
 projects[strongarm][version] = "2.0"
@@ -59,9 +71,6 @@ projects[uuid_features][version] = "1.x-dev"
 
 projects[views][subdir] = contrib
 projects[views][version] = "3.8"
-
-projects[bootstrap][version] = "3.x-dev"
-projects[cms_bootstrap3][version] = "1.x-dev"
 
 projects[cms_core][subdir] = cms
 projects[cms_core][version] = "1.x-dev"
@@ -162,14 +171,17 @@ projects[wysiwyg][version] = "2.x-dev"
 projects[wysiwyg_filter][subdir] = contrib
 projects[wysiwyg_filter][version] = "1.x-dev"
 
-;projects[sc_basic][subdir] = contrib
-;projects[sc_basic][version] = "1.0-beta1"
+projects[shortcode][subdir] = contrib
+projects[shortcode][version] = "2.0"
 
-;projects[shortcode][subdir] = contrib
-;projects[shortcode][version] = "2.0"
+projects[jsdelivr][subdir] = contrib
+
+projects[sooperthemes_basic_shortcodes][subdir] = contrib
+
+projects[bs_shortcodes][subdir] = contrib
 
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.3/ckeditor_4.3.3_standard.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.5/ckeditor_4.4.5_full.zip"
 libraries[ckeditor][directory_name] = "ckeditor"
 
 projects[cms_wysiwyg][subdir] = cms

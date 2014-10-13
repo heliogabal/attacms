@@ -1,7 +1,7 @@
 name = cms
 distribution_name = cms
 description = Drupal distribution for enhanced security of web applications through contributed modules.
-version = 7.x-1.0-alpha5
+version = 7.x-1.0-beta5
 core = 7.x
 
 ; Core
@@ -38,7 +38,6 @@ dependencies[] = user
 ; ----
 dependencies[] = block_class
 dependencies[] = cms_core
-dependencies[] = cms_wysiwyg
 dependencies[] = ctools
 dependencies[] = elements
 dependencies[] = entity
@@ -70,8 +69,8 @@ variables[honeypot_protect_all_forms] = 1
 variables[html5_tools_override_views_field_rewrite_elements] = 1
 variables[image_jpeg_quality] = 100
 variables[jquery_update_jquery_cdn] = google
-variables[jquery_update_jquery_version] = 1.7
-variables[site_frontpage] = content/drupal-cms-home
+variables[jquery_update_jquery_version] = 1.8
+variables[site_frontpage] = content/drupal-cms-powerstart
 variables[site_name] = Drupal CMS
 variables[update_check_disabled] = 0
 variables[update_check_frequency] = 1
@@ -149,7 +148,9 @@ dependencies[] = views_bootstrap
 
 dependencies[] = cms_wysiwyg
 dependencies[] = media
+dependencies[] = media_internet
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_filter
-;dependencies[] = sc_basic
-;dependencies[] = shortcode
+dependencies[] = bs_shortcodes
+dependencies[] = sooperthemes_basic_shortcodes
+dependencies[] = shortcode
