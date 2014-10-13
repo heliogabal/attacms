@@ -77,10 +77,9 @@ projects[bootstrap][download][type] = "git"
 projects[bootstrap][download][url] = "http://git.drupal.org/project/bootstrap.git"
 projects[bootstrap][download][revision] = "de0608d0ff712597f31d3eaac27abaf1f6fdb934"
 
-projects[cms_bootstrap3][version] = "1.x-dev"
+projects[cms_bootstrap3]
 
 projects[cms_core][subdir] = cms
-projects[cms_core][version] = "1.x-dev"
 
 
 ; CMS Blog
@@ -89,7 +88,6 @@ projects[cms_core][version] = "1.x-dev"
 projects[tagclouds][subdir] = contrib
 
 projects[cms_blog][subdir] = cms
-projects[cms_blog][version] = "1.x-dev"
 
 ; CMS Contact
 ; -------
@@ -98,7 +96,6 @@ projects[webform][subdir] = contrib
 projects[webform][version] = "4.0-rc5"
 
 projects[cms_contact][subdir] = cms
-projects[cms_contact][version] = "1.x-dev"
 
 ; CMS Events
 ; -------
@@ -117,7 +114,6 @@ projects[addressfield_tokens][subdir] = contrib
 projects[date][subdir] = contrib
 
 projects[cms_events][subdir] = cms
-projects[cms_events][version] = "1.x-dev"
 
 libraries[plupload][download][type] = "get"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
@@ -132,7 +128,6 @@ projects[registration][subdir] = contrib
 ; -------
 
 projects[cms_news][subdir] = cms
-projects[cms_news][version] = "1.x-dev"
 
 ; CMS Performance
 ; -------
@@ -140,7 +135,6 @@ projects[cms_news][version] = "1.x-dev"
 projects[entitycache][subdir] = contrib
 
 projects[cms_performance][subdir] = cms
-projects[cms_performance][version] = "1.x-dev"
 
 ; CMS Portfolio
 ; -------
@@ -164,7 +158,6 @@ libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/arch
 libraries[plupload][directory_name] = "plupload"
 
 projects[cms_portfolio][subdir] = cms
-projects[cms_portfolio][version] = "1.x-dev"
 
 ; CMS WYSIWYG
 ; -------
@@ -192,4 +185,3 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][directory_name] = "ckeditor"
 
 projects[cms_wysiwyg][subdir] = cms
-projects[cms_wysiwyg][version] = "1.x-dev"
