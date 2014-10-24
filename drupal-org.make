@@ -11,6 +11,8 @@ projects[libraries][version] = "2.2"
 projects[ctools][subdir] = contrib
 projects[ctools][version] = "1.4"
 
+projects[bean][subdir] = contrib
+
 projects[block_class][subdir] = contrib
 projects[block_class][version] = "2.1"
 projects[block_class][patch][] = "https://www.drupal.org/files/issues/block_class-predefined_classes_dropdown-665012-21.patch"
@@ -39,6 +41,9 @@ projects[honeypot][subdir] = contrib
 
 projects[html5_tools][subdir] = contrib
 projects[html5_tools][version] = "1.2"
+
+projects[image_field_caption][subdir] = contrib
+projects[image_field_caption][version] = "1.x-dev"
 
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = "2.4"
@@ -145,8 +150,6 @@ projects[filefield_sources][subdir] = contrib
 
 projects[filefield_sources_plupload][subdir] = contrib
 
-projects[image_field_caption][subdir] = contrib
-
 projects[views_bootstrap][subdir] = contrib
 projects[views_bootstrap][version] = "3.1"
 projects[views_bootstrap][patch][] = "http://www.drupal.org/files/issues/views_bootstrap-thumbails-columns-per-device-size-2203111-26.patch"
@@ -167,9 +170,6 @@ projects[media][version] = "2.x-dev"
 
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][version] = "2.x-dev"
-
-projects[wysiwyg_filter][subdir] = contrib
-projects[wysiwyg_filter][version] = "1.x-dev"
 
 projects[shortcode][subdir] = contrib
 projects[shortcode][version] = "2.0"

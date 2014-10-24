@@ -1,7 +1,7 @@
 name = cms
 distribution_name = cms
-description = Drupal distribution for enhanced security of web applications through contributed modules.
-version = 7.x-1.0-beta5
+description = Drupal distribution with production ready CMS features
+version = 7.x-1.0-beta10
 core = 7.x
 
 ; Core
@@ -9,6 +9,7 @@ core = 7.x
 dependencies[] = block
 dependencies[] = comment
 dependencies[] = contextual
+dependencies[] = color
 dependencies[] = dashboard
 dependencies[] = dblog
 dependencies[] = field
@@ -36,6 +37,7 @@ dependencies[] = user
 
 ; CMS Core
 ; ----
+dependencies[] = bean
 dependencies[] = block_class
 dependencies[] = cms_core
 dependencies[] = ctools
@@ -70,7 +72,6 @@ variables[html5_tools_override_views_field_rewrite_elements] = 1
 variables[image_jpeg_quality] = 100
 variables[jquery_update_jquery_cdn] = google
 variables[jquery_update_jquery_version] = 1.8
-variables[site_frontpage] = content/drupal-cms-powerstart
 variables[site_name] = Drupal CMS
 variables[update_check_disabled] = 0
 variables[update_check_frequency] = 1
@@ -150,7 +151,6 @@ dependencies[] = cms_wysiwyg
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = wysiwyg
-dependencies[] = wysiwyg_filter
 dependencies[] = bs_shortcodes
 dependencies[] = sooperthemes_basic_shortcodes
 dependencies[] = shortcode
