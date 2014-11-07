@@ -82,7 +82,8 @@ projects[bootstrap][download][type] = "git"
 projects[bootstrap][download][url] = "http://git.drupal.org/project/bootstrap.git"
 projects[bootstrap][download][revision] = "de0608d0ff712597f31d3eaac27abaf1f6fdb934"
 
-projects[cms_bootstrap3][version] = 1
+projects[] = "cms_bootstrap3"
+projects[] = "nexus"
 
 projects[cms_core][subdir] = cms
 
@@ -152,7 +153,7 @@ projects[filefield_sources_plupload][subdir] = contrib
 
 projects[views_bootstrap][subdir] = contrib
 projects[views_bootstrap][version] = "3.1"
-projects[views_bootstrap][patch][] = "http://www.drupal.org/files/issues/views_bootstrap-thumbails-columns-per-device-size-2203111-26.patch"
+projects[views_bootstrap][patch][] = "http://www.drupal.org/files/issues/views_bootstrap-thumbails-columns-per-device-size-2203111-40.patch"
 
 projects[image_url_formatter][subdir] = contrib
 
@@ -172,13 +173,21 @@ projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][version] = "2.x-dev"
 
 projects[shortcode][subdir] = contrib
-projects[shortcode][version] = "2.0"
+
+projects[shortcode_wysiwyg][subdir] = contrib
 
 projects[jsdelivr][subdir] = contrib
 
 projects[sooperthemes_basic_shortcodes][subdir] = contrib
 
 projects[bs_shortcodes][subdir] = contrib
+
+projects[block_shortcode][type] = module
+projects[block_shortcode][subdir] = sandboxes
+projects[block_shortcode][download][type] = git
+projects[block_shortcode][download][branch] = "7.x-1.x"
+projects[block_shortcode][download][url] = http://git.drupal.org/sandbox/SeanFitzpatrick/2219069.git
+projects[block_shortcode][download][revision] = aaab3b4443532bb9997791b7cf611b7a284c4914
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.5/ckeditor_4.4.5_full.zip"

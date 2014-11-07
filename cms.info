@@ -1,7 +1,6 @@
 name = cms
 distribution_name = cms
 description = Drupal distribution with production ready CMS features
-version = 7.x-1.0-beta10
 core = 7.x
 
 ; Core
@@ -62,8 +61,8 @@ dependencies[] = uuid_features
 dependencies[] = views
 dependencies[] = views_ui
 variables[admin_theme] = seven
-variables[theme_default] = cms_bootstrap3
-theme = cms_bootstrap3
+variables[theme_default] = nexus
+theme = nexus
 variables[fences_default_classes] = 1
 variables[fences_default_markup] = 1
 variables[honeypot_protect_all_forms] = 1
@@ -72,7 +71,7 @@ variables[html5_tools_override_views_field_rewrite_elements] = 1
 variables[image_jpeg_quality] = 100
 variables[jquery_update_jquery_cdn] = google
 variables[jquery_update_jquery_version] = 1.8
-variables[site_name] = Drupal CMS
+variables[site_name] = Powerstart
 variables[update_check_disabled] = 0
 variables[update_check_frequency] = 1
 variables[update_notification_threshold] = security
@@ -141,16 +140,17 @@ dependencies[] = image_field_caption
 dependencies[] = image_url_formatter
 dependencies[] = libraries
 dependencies[] = plupload
-
 dependencies[] = views_bootstrap
 
 ; CMS WYSIWYG
 ; -------
 
+dependencies[] = block_shortcode
+dependencies[] = bs_shortcodes
 dependencies[] = cms_wysiwyg
 dependencies[] = media
 dependencies[] = media_internet
-dependencies[] = wysiwyg
-dependencies[] = bs_shortcodes
-dependencies[] = sooperthemes_basic_shortcodes
 dependencies[] = shortcode
+dependencies[] = shortcode_wysiwyg
+dependencies[] = sooperthemes_basic_shortcodes
+dependencies[] = wysiwyg
