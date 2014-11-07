@@ -152,7 +152,7 @@ projects[filefield_sources][subdir] = contrib
 projects[filefield_sources_plupload][subdir] = contrib
 
 projects[views_bootstrap][subdir] = contrib
-projects[views_bootstrap][version] = "3.1"
+projects[views_bootstrap][version] = "3.x-dev"
 projects[views_bootstrap][patch][] = "http://www.drupal.org/files/issues/views_bootstrap-thumbails-columns-per-device-size-2203111-40.patch"
 
 projects[image_url_formatter][subdir] = contrib
