@@ -43,7 +43,6 @@ dependencies[] = ctools
 dependencies[] = elements
 dependencies[] = entity
 dependencies[] = features
-dependencies[] = features_override
 dependencies[] = fences
 dependencies[] = file_entity
 dependencies[] = globalredirect
