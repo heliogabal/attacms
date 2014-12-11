@@ -31,7 +31,7 @@ function cms_install(&$tasks, &$install_state) {
   if (module_exists('cms_core_content')) {
     $values[] = array(
       'module' => 'bean',
-      'delta' => 'preblock-1-time-saver',
+      'delta' => 'preblock-1-time-saver-icon-white',
       'theme' => $cms_theme,
       'status' => '1',
       'visibility' => '0',
@@ -44,7 +44,7 @@ function cms_install(&$tasks, &$install_state) {
     );
     $values[] = array(
       'module' => 'bean',
-      'delta' => 'preblock-2-shortcodes',
+      'delta' => 'preblock-2-shortcodes-icon-white',
       'theme' => $cms_theme,
       'status' => '1',
       'visibility' => '0',
@@ -57,7 +57,7 @@ function cms_install(&$tasks, &$install_state) {
     );
     $values[] = array(
       'module' => 'bean',
-      'delta' => 'preblock-3-bootstrap',
+      'delta' => 'preblock-3-bootstrap-icon-white',
       'theme' => $cms_theme,
       'status' => '1',
       'visibility' => '0',
@@ -186,7 +186,7 @@ function cms_install(&$tasks, &$install_state) {
   $nids = db_query("SELECT nid FROM {node}")->fetchCol();
   pathauto_node_update_alias_multiple($nids, 'bulkupdate');
 
-  $system_path = _cms_get_node_path_for_uuid('79b51860-5f17-4baa-a8c8-acf722037a21');
+  $system_path = _cms_get_node_path_for_uuid('d6b1dd5c-9212-4468-9a64-e6e674ca32b7');
   variable_set('site_frontpage', $system_path);
 
 }
