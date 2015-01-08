@@ -48,12 +48,16 @@ projects[image_field_caption][version] = "1.x-dev"
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = "2.4"
 
+projects[menu_block][subdir] = contrib
+
 projects[metatag][subdir] = contrib
 
 projects[metatag_views_overview][subdir] = contrib
 projects[metatag_views_overview][version] = "1.x-dev"
 
 projects[module_filter][subdir] = contrib
+
+projects[node_export][subdir] = contrib
 
 projects[node_class][subdir] = contrib
 projects[node_class][version] = "1.3"
