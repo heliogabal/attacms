@@ -15,4 +15,5 @@ includes[] = drupal-org-core.make
 ; Install profiles
 ; ----------------
 projects[cms][type] = profile
-projects[cms][download][type] = file
+projects[cms][download][type] = git
+projects[cms][download][url] = https://github.com/heliogabal/attacms.git
